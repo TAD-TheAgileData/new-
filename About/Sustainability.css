@@ -1,0 +1,102 @@
+/* ================= PAGE ================= */
+.sustainability-page {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f6f8fa;
+  color: #0f172a;
+}
+
+/* ================= HERO ================= */
+.sustainability-hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(15, 23, 42, 0.65);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.commitment-header {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.commitment-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #176179;
+}
+
+/* ================= CONTENT ================= */
+.sustainability-content {
+  padding: 40px 8% 80px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.content-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= TEXT BLOCK STYLE ================= */
+.commitment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.commitment-item {
+  background: #ffffff;
+  padding: 28px 34px;
+  border-radius: 18px;
+  border-left: 5px solid #176179;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.commitment-item p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.3rem;
+  }
+
+  .commitment-header h2 {
+    font-size: 1.6rem;
+  }
+}
