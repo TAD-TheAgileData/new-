@@ -13,10 +13,10 @@ import glass1 from "../../assets/Images/VLT-image-1.webp";
 import glass2 from "../../assets/Images/VLT-image-1.webp";
 import glass3 from "../../assets/Images/VLT-image-1.webp";
 
-/* ================= ANIMATION SYSTEM ================= */
+/* ================= ANIMATIONS ================= */
 
 const heroReveal = {
-  hidden: { opacity: 0, scale: 1.1 },
+  hidden: { opacity: 0, scale: 1.12 },
   visible: {
     opacity: 1,
     scale: 1,
@@ -30,7 +30,7 @@ const textUp = {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 1 },
   },
 };
 
@@ -38,31 +38,32 @@ const stagger = {
   visible: {
     transition: {
       staggerChildren: 0.25,
-      delayChildren: 0.3,
+      delayChildren: 0.4,
     },
   },
 };
 
 const floatCard = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 120 },
   visible: {
     opacity: 1,
     y: 0,
     transition: { duration: 1 },
   },
 };
-{/* ===== PREMIUM BACKGROUND LIGHT EFFECTS ===== */}
-<div className="bg-light-layer">
-  <span className="light-orb orb-a"></span>
-  <span className="light-orb orb-b"></span>
-  <span className="light-orb orb-c"></span>
-</div>
 
 export default function AutomotiveIndustryPremium() {
   return (
     <div className="auto-root">
 
-      {/* ================= CINEMATIC HERO ================= */}
+      {/* ===== BACKGROUND LIGHT EFFECT ===== */}
+      <div className="bg-light-layer">
+        <span className="light-orb orb-a" />
+        <span className="light-orb orb-b" />
+        <span className="light-orb orb-c" />
+      </div>
+
+      {/* ================= HERO ================= */}
       <section className="auto-hero">
         <motion.div
           className="auto-hero-bg"
@@ -87,15 +88,14 @@ export default function AutomotiveIndustryPremium() {
           </motion.h1>
 
           <motion.p variants={textUp}>
-            Precision-engineered glazing systems powering
-            next-generation mobility platforms.
+            Precision-engineered glazing systems enabling safety,
+            performance, and next-generation mobility platforms.
           </motion.p>
         </motion.div>
       </section>
 
-      {/* ================= IMAGE + TEXT STORY ================= */}
+      {/* ================= STORY ================= */}
       <section className="auto-story">
-
         <motion.div
           className="auto-story-image"
           initial={{ opacity: 0, x: -120 }}
@@ -115,25 +115,22 @@ export default function AutomotiveIndustryPremium() {
         >
           <h2>OEM & Aftermarket Solutions</h2>
           <p>
-            From mass-production OEM supply to high-precision
-            aftermarket systems, our glazing solutions deliver
-            durability, clarity, and safety without compromise.
+            From mass-production OEM programs to precision aftermarket
+            glazing, our solutions deliver durability, optical clarity,
+            and regulatory compliance.
           </p>
 
           <ul>
             <li>Windshields</li>
             <li>Sidelites & Backlites</li>
             <li>Sunroofs</li>
-            <li>Quarter Glasses</li>
+            <li>Quarter Glass</li>
           </ul>
         </motion.div>
-
       </section>
 
-      {/* ================= FLOATING GLASS CARDS ================= */}
+      {/* ================= FLOATING CARDS ================= */}
       <section className="auto-cards">
-<div className="bg-gradient-wave" />
-
         <motion.div
           className="auto-card"
           variants={floatCard}
@@ -146,7 +143,7 @@ export default function AutomotiveIndustryPremium() {
           <h3>Advanced Capabilities</h3>
           <p>
             Ceramic printing, lamination, bending, tempering,
-            sensor cut-outs and ADAS-ready integration.
+            ADAS cut-outs, and sensor integration.
           </p>
         </motion.div>
 
@@ -161,7 +158,7 @@ export default function AutomotiveIndustryPremium() {
           <MdVerifiedUser />
           <h3>Global Compliance</h3>
           <p>
-            ECE R43, DOT, ISO and IATF 16949 certified
+            ECE R43, DOT, ISO & IATF 16949 certified
             automotive quality systems.
           </p>
         </motion.div>
@@ -178,11 +175,11 @@ export default function AutomotiveIndustryPremium() {
           <h3>Applications</h3>
           <p>
             Passenger vehicles, commercial fleets,
-            buses, and specialty automotive platforms.
+            buses, and specialty platforms.
           </p>
         </motion.div>
-
       </section>
+
     </div>
   );
 }
