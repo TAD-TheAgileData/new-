@@ -2,7 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./CustomerFirst.css";
 
+/* IMAGES */
 import heroImg from "../assets/Images/VLT-image-1.webp";
+import img1 from "../assets/Images/VLT-image-1.webp";
+import img2 from "../assets/Images/VLT-image-1.webp";
+import img3 from "../assets/Images/VLT-image-1.webp";
+import img4 from "../assets/Images/VLT-image-1.webp";
 
 /* ANIMATIONS */
 const fade = {
@@ -16,20 +21,12 @@ const fade = {
 
 const slideLeft = {
   hidden: { opacity: 0, x: -80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 1 }
-  }
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } }
 };
 
 const slideRight = {
   hidden: { opacity: 0, x: 80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 1 }
-  }
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } }
 };
 
 export default function CustomerFirst() {
@@ -70,8 +67,7 @@ export default function CustomerFirst() {
           <h2>Dedicated Technical & Commercial Support</h2>
           <p>
             Cross-functional teams engage early with customers to provide
-            engineering clarity, commercial alignment, and proactive guidance
-            throughout the product lifecycle.
+            engineering clarity, commercial alignment, and proactive guidance.
           </p>
         </motion.div>
 
@@ -82,7 +78,7 @@ export default function CustomerFirst() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="cf-glass-box" />
+          <img src={img1} alt="Technical Support" className="cf-module-image" />
         </motion.div>
       </section>
 
@@ -99,7 +95,7 @@ export default function CustomerFirst() {
           <h2>Fast Response & Transparent Communication</h2>
           <p>
             Agile response systems and clear communication channels ensure
-            rapid resolution, real-time updates, and complete visibility.
+            rapid resolution and real-time visibility.
           </p>
         </motion.div>
 
@@ -110,7 +106,7 @@ export default function CustomerFirst() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="cf-glass-box accent" />
+          <img src={img2} alt="Fast Response" className="cf-module-image" />
         </motion.div>
       </section>
 
@@ -127,7 +123,7 @@ export default function CustomerFirst() {
           <h2>Custom OEM & Project-Specific Solutions</h2>
           <p>
             Flexible tooling, process adaptation, and engineering customization
-            allow us to meet complex OEM and project-driven requirements.
+            allow us to meet complex OEM requirements.
           </p>
         </motion.div>
 
@@ -138,7 +134,7 @@ export default function CustomerFirst() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="cf-glass-box soft" />
+          <img src={img3} alt="OEM Solutions" className="cf-module-image" />
         </motion.div>
       </section>
 
@@ -166,7 +162,7 @@ export default function CustomerFirst() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="cf-glass-box premium" />
+          <img src={img4} alt="Long-Term Partnership" className="cf-module-image" />
         </motion.div>
       </section>
 

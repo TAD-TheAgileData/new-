@@ -85,36 +85,54 @@ export default function TrustedBrands() {
       </section>
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="tb-testimonials">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
-        >
-          What Our Partners Say
-        </motion.h2>
+  {/* ================= TESTIMONIALS ================= */}
+<section className="tb-testimonials">
+  <motion.h2
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.9 }}
+  >
+    What Our Industry Partners Say
+  </motion.h2>
 
-        <div className="tb-testimonial-grid">
-          {[
-            "Consistent quality and on-time delivery make them a trusted partner.",
-            "Their engineering support and customization capabilities stand out.",
-            "A reliable supplier with world-class manufacturing discipline.",
-          ].map((text, i) => (
-            <motion.div
-              key={i}
-              className="tb-testimonial-card"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.8 }}
-            >
-              <p>“{text}”</p>
-              <span>— Industry Partner</span>
-            </motion.div>
-          ))}
+  <div className="tb-testimonial-grid">
+    {[
+      {
+        text: "Consistent quality and on-time delivery make them a trusted long-term partner.",
+        name: "Senior Procurement Manager",
+        company: "Leading Automotive OEM"
+      },
+      {
+        text: "Their engineering support and customization capabilities truly stand out.",
+        name: "Head of Product Engineering",
+        company: "Global Mobility Solutions Provider"
+      },
+      {
+        text: "A reliable supplier with world-class manufacturing discipline and safety focus.",
+        name: "Operations Director",
+        company: "Commercial Vehicle Manufacturer"
+      }
+    ].map((item, i) => (
+      <motion.div
+        key={i}
+        className="tb-testimonial-card"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: i * 0.15, duration: 0.8 }}
+      >
+        <p>“{item.text}”</p>
+
+        <div className="tb-testimonial-author">
+          <strong>{item.name}</strong>
+          <span>{item.company}</span>
         </div>
-      </section>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* ================= CASE STUDY ================= */}
       <section className="tb-case">

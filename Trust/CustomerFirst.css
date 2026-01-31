@@ -84,33 +84,26 @@
   color: #475569;
 }
 
-/* VISUAL BLOCK */
+/* IMAGE VISUAL (NO BOX LOOK) */
 .cf-module-visual {
   position: relative;
-}
-
-.cf-glass-box {
-  height: 340px;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
   border-radius: 36px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.9),
-    rgba(248,250,252,0.95)
-  );
-  box-shadow: 0 40px 120px rgba(15,23,42,0.15);
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
 }
 
-/* VARIANTS */
-.cf-glass-box.accent {
-  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+.cf-module-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 36px;
+  transition: transform 0.8s ease;
 }
 
-.cf-glass-box.soft {
-  background: linear-gradient(135deg, #f1f5f9, #ffffff);
-}
-
-.cf-glass-box.premium {
-  background: linear-gradient(135deg, #dbeafe, #ffffff);
+.cf-module-visual:hover .cf-module-image {
+  transform: scale(1.06);
 }
 
 /* RESPONSIVE */
@@ -123,5 +116,9 @@
 
   .cf-hero-content h1 {
     font-size: 3rem;
+  }
+
+  .cf-module-visual {
+    height: 280px;
   }
 }
