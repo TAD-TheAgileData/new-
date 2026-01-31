@@ -10,7 +10,9 @@ import {
 import "./PassengerCarMarket.css";
 
 import carImg from "../assets/Images/VLT-image-1.webp";
-
+import autoGlassImg from "../assets/Images/VLT-image-1.webp";
+import bondingImg from "../assets/Images/VLT-image-1.webp";
+import fitmentImg from "../assets/Images/VLT-image-1.webp";
 /* ================= ANIMATIONS ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -36,79 +38,114 @@ export default function PassengerCarMarket() {
     <div className="pcm-root">
 
       {/* ================= HERO ================= */}
-      <section className="pcm-hero">
-        <div
-          className="pcm-hero-bg"
-          style={{ backgroundImage: `url(${carImg})` }}
-        />
-        <div className="pcm-hero-overlay" />
+      {/* ================= HERO ================= */}
+<section className="pcm-hero">
 
-        <motion.div
-          className="pcm-hero-content"
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.span variants={fadeUp} className="pcm-eyebrow">
-            PASSENGER CAR MARKET
-          </motion.span>
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="pcm-hero-bg"
+    style={{ backgroundImage: `url(${carImg})` }}
+  />
 
-          <motion.h1 variants={fadeUp}>
-            Advanced Automotive Glass
-            <span> for Passenger Vehicles</span>
-          </motion.h1>
+  {/* DARK / GLASS OVERLAY */}
+  <div className="pcm-hero-overlay" />
 
-          <motion.p variants={fadeUp}>
-            OEM-grade automotive glazing solutions engineered for
-            safety, precision, high-volume production, and global
-            regulatory compliance.
-          </motion.p>
-        </motion.div>
-      </section>
+  {/* CONTENT */}
+  <motion.div
+    className="pcm-hero-content"
+    initial="hidden"
+    animate="visible"
+  >
+    <motion.span variants={fadeUp} className="pcm-eyebrow">
+      PASSENGER CAR MARKET
+    </motion.span>
 
-      {/* ================= APPLICATIONS ================= */}
-      <section className="pcm-section">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Applications
-        </motion.h2>
+    <motion.h1 variants={fadeUp}>
+      Advanced Automotive Glass
+      <span> for Passenger Vehicles</span>
+    </motion.h1>
 
-        <div className="pcm-card-grid">
-          {[
-            {
-              icon: <FaCar />,
-              title: "Automotive Glazing",
-              desc: "Windshields, sidelites, and backlites manufactured to OEM optical and safety standards."
-            },
-            {
-              icon: <FaCogs />,
-              title: "Primer & Bonding Solutions",
-              desc: "Advanced primer application and bonding systems ensuring durability and fitment accuracy."
-            },
-            {
-              icon: <FaCheckCircle />,
-              title: "Fitment Applications",
-              desc: "Precision-fit solutions supporting automated and manual installation processes."
-            }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="pcm-card"
-              variants={cardAnim}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-            >
-              <div className="pcm-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+    <motion.p variants={fadeUp}>
+      OEM-grade automotive glazing solutions engineered for safety,
+      precision, high-volume production, and global regulatory compliance.
+    </motion.p>
+  </motion.div>
+
+</section>
+
+
+       {/* ================= APPLICATIONS ================= */}
+<section className="pcm-section pcm-zigzag">
+<motion.h2
+  className="pcm-zigzag-title pcm-zigzag-center"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 1,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+>
+  Applications
+</motion.h2>
+
+
+
+  {[
+  {
+    title: "Automotive Glazing",
+    desc:
+      "High-performance windshields, sidelites, and backlites engineered for superior optical clarity, impact resistance, and long-term durability. Manufactured in compliance with OEM specifications and global automotive safety standards, ensuring consistent quality across high-volume passenger vehicle programs.",
+    img: autoGlassImg,
+  },
+  {
+    title: "Primer & Bonding Solutions",
+    desc:
+      "Advanced primer application and bonding technologies designed to enhance adhesion strength, structural integrity, and environmental resistance. Optimized for automated and manual assembly lines, these solutions ensure reliable glass-to-body bonding and long-lasting performance under extreme operating conditions.",
+    img: bondingImg,
+  },
+  {
+    title: "Fitment Applications",
+    desc:
+      "Precision-engineered fitment solutions supporting seamless integration of automotive glass across diverse vehicle platforms. Designed to meet tight dimensional tolerances, enabling efficient installation, reduced assembly time, and consistent fit quality for both OEM manufacturing and aftermarket service operations.",
+    img: fitmentImg,
+  },
+]
+.map((item, i) => (
+    <motion.div
+      key={i}
+      className={`pcm-zigzag-row ${i % 2 !== 0 ? "reverse" : ""}`}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+    >
+      {/* IMAGE */}
+      <motion.div
+        className="pcm-zigzag-image"
+        initial={{ scale: 0.95, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <img src={item.img} alt={item.title} />
+      </motion.div>
+
+      {/* CONTENT */}
+      <motion.div
+        className="pcm-zigzag-content"
+        initial={{ x: i % 2 === 0 ? 40 : -40, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h3>{item.title}</h3>
+        <p>{item.desc}</p>
+      </motion.div>
+    </motion.div>
+  ))}
+</section>
+
 
       {/* ================= KEY STRENGTHS ================= */}
 <section className="pcm-strengths">
