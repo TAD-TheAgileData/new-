@@ -1,0 +1,265 @@
+:root {
+  --dark: #0a0f1c;
+  --light: #f8fafc;
+  --panel: #ffffff;
+  --muted: #64748b;
+  --accent: #2563eb;
+
+  --glass: rgba(255,255,255,0.65);
+  --blur: blur(20px);
+
+  --shadow-xl: 0 60px 140px rgba(15,23,42,0.45);
+  --shadow-soft: 0 25px 70px rgba(15,23,42,0.18);
+}
+
+
+/* ================= HERO ================= */
+/* ================= FULL HERO ================= */
+.bcx-hero-full {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  color: #ffffff;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* BACKGROUND IMAGE */
+.bcx-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* DARK OVERLAY */
+.bcx-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 6, 23, 0.75),
+    rgba(2, 6, 23, 0.45),
+    rgba(2, 6, 23, 0.75)
+  );
+  z-index: 2;
+}
+
+/* CONTENT */
+.bcx-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+}
+
+.bcx-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  color: #7dd3fc;
+}
+
+.bcx-hero-content h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.bcx-hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e5e7eb;
+  max-width: 560px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .bcx-hero-full {
+    padding: 0 6%;
+  }
+
+  .bcx-hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bcx-hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .bcx-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+.bcx-tag {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  background: rgba(37,99,235,0.25);
+  color: #bfdbfe;
+}
+
+
+/* ================= FLOAT ================= */
+/* ================= FLOATING STRIP ================= */
+.bcx-float {
+  position: relative;
+  margin-top: -120px; /* pulls card over hero */
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding: 0 6%;
+}
+
+.bcx-float-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 48px 56px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 40px 90px rgba(15, 23, 42, 0.25);
+}
+
+.bcx-float-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.bcx-float-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .bcx-float {
+    margin-top: -80px;
+  }
+
+  .bcx-float-card {
+    padding: 36px 28px;
+  }
+
+  .bcx-float-card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= FEATURE RAIL ================= */
+.bcx-rail {
+  display: flex;
+  gap: 40px;
+  padding: 140px 8%;
+  overflow-x: auto;
+}
+
+.bcx-rail-item {
+  min-width: 320px;
+  background: var(--panel);
+  border-radius: 34px;
+  padding: 46px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.6s ease;
+}
+
+.bcx-rail-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+.bcx-rail-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.bcx-rail-item p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ================= DIAGONAL ================= */
+.bcx-diagonal {
+  margin: 120px 0;
+  transform: skewY(-4deg);
+}
+
+.bcx-diagonal img {
+  width: 100%;
+  border-radius: 0;
+  transform: skewY(4deg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ================= STATEMENT ================= */
+.bcx-statement {
+  padding: 160px 8%;
+  background: linear-gradient(180deg, #ffffff, #eef2ff);
+}
+
+.bcx-statement-box {
+  max-width: 900px;
+  background: white;
+  border-radius: 40px;
+  padding: 80px;
+  box-shadow: var(--shadow-soft);
+}
+
+.bcx-statement-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.bcx-statement-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bcx-statement-box li {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  padding-left: 28px;
+  position: relative;
+  color: var(--muted);
+}
+
+.bcx-statement-box li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .bcx-hero {
+    grid-template-columns: 1fr;
+    padding-top: 120px;
+  }
+
+  .bcx-float-card {
+    padding: 50px;
+    margin: 0 6%;
+  }
+}
