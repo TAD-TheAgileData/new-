@@ -55,9 +55,9 @@ export default function BendingCapabilities() {
       </h1>
 
       <p>
-        Accurate bending for car, truck, and bus glass engineered with
-        exceptional optical consistency, curvature precision, and
-        OEM-grade quality standards.
+     Thermally strengthened automotive glass engineered for superior
+        impact resistance, thermal durability, and safe fragmentation,
+        meeting stringent OEM and global safety standards
       </p>
     </motion.div>
 
