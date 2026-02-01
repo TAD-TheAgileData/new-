@@ -15,13 +15,26 @@ export default function BusCoachGlassPremium() {
   return (
     <div className="bcx-root">
 
-      {/* ================= SPLIT HERO ================= */}
-      <section className="bcx-hero">
+    {/* ================= FULL HERO ================= */}
+      <section className="bcx-hero-full">
+        {/* BACKGROUND IMAGE */}
         <motion.div
-          className="bcx-hero-text"
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="bcx-hero-bg"
+          style={{ backgroundImage: `url(${heroImg})` }}
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+        />
+
+        {/* OVERLAY */}
+        <div className="bcx-hero-overlay" />
+
+        {/* CONTENT */}
+        <motion.div
+          className="bcx-hero-content"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="bcx-tag">PREMIUM PASSENGER GLAZING</span>
           <h1>Bus & Coach Glass</h1>
@@ -29,15 +42,6 @@ export default function BusCoachGlassPremium() {
             Advanced curved glass systems engineered for large passenger
             vehicles, delivering safety, visibility, and long-term durability.
           </p>
-        </motion.div>
-
-        <motion.div
-          className="bcx-hero-image"
-          initial={{ opacity: 0, scale: 1.15 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
-        >
-          <img src={heroImg} alt="Bus Glass Hero" />
         </motion.div>
       </section>
 
@@ -48,12 +52,13 @@ export default function BusCoachGlassPremium() {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <h2>Designed for Scale & Strength</h2>
           <p>
             Our bus and coach glazing solutions are optimized for large surface
-            areas, complex curvature, and structural bonding requirements.
+            areas, complex curvature, and high-strength structural bonding
+            requirements demanded by modern passenger mobility.
           </p>
         </motion.div>
       </section>
