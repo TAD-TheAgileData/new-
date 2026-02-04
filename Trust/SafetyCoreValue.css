@@ -1,4 +1,4 @@
-:root {
+.scm-root {
   --bg: #f8fafc;
   --surface: rgba(255,255,255,0.97);
   --border: rgba(15,23,42,0.08);
@@ -47,7 +47,7 @@
   border-radius: 999px;
   background: rgba(2,132,199,0.14);
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.25em;
   margin-bottom: 28px;
 }
@@ -58,7 +58,7 @@
 }
 
 .scm-hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -79,7 +79,7 @@
 }
 
 .scm-left p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
   margin-bottom: 46px;
@@ -97,7 +97,7 @@
 }
 
 .scm-metrics span {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: var(--muted);
 }
 
@@ -117,18 +117,18 @@
 }
 
 .scm-module svg {
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--accent);
   margin-bottom: 22px;
 }
 
 .scm-module h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-bottom: 14px;
 }
 
 .scm-module p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -172,7 +172,7 @@
 }
 
 .scm-safety-header p {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: #475569;
 }
