@@ -3,7 +3,7 @@ import "./AutomationDigitalManufacturing.css";
 import heroImg from "../../assets/Images/VLT-image-1.webp";
 import automationImg from "../../assets/Images/VLT-image-1.webp";
 
-const AutomationDigital = () => {
+const AutomationDigitalManufacturing = () => {
   return (
     <div className="adm-root">
 
@@ -76,4 +76,4 @@ const AutomationDigital = () => {
   );
 };
 
-export default AutomationDigital;
+export default AutomationDigitalManufacturing;

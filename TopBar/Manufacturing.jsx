@@ -38,24 +38,93 @@ import glastonLogo from "../../assets/Images/VLT-image-1.webp";
 import tamglassLogo from "../../assets/Images/VLT-image-1.webp";
 import bandoLogo from "../../assets/Images/VLT-image-1.webp";
 import joisonLogo from "../../assets/Images/VLT-image-1.webp";
+import chinalogo from "../../assets/Images/VLT-image-1.webp";
+import ChanZhou from "../../assets/Images/VLT-image-1.webp";
+import Bystroniclogo from "../../assets/Images/VLT-image-1.webp";
+import Jumbo from "../../assets/Images/VLT-image-1.webp";
+import { linearGradient } from "framer-motion/client";
 
-/* DATA */
+/* ===== CARD DATA ===== */
 const cardData = [
-  { image: img1, logo: bandoLogo, make: "Japan", process: "Cut & Grinding", desc: ["High-precision CNC cutting","Smooth edge grinding","Accurate dimensions"] },
-  { image: img2, logo: joisonLogo, make: "China", process: "Screen Printing", desc: ["Automated ceramic printing","Uniform patterns","Long durability"] },
-  { image: img3, logo: joisonLogo, make: "China", process: "Enamel Drying", desc: ["Controlled drying","Color consistency","Strong adhesion"] },
-  { image: img4, logo: tamglassLogo, make: "Finland", process: "Bending", desc: ["Advanced furnaces","Optical clarity","Precise curvature"] },
-  { image: img5, logo: tamglassLogo, make: "Finland", process: "Bending", desc: ["Thermal forming","Complex geometry","Repeatable accuracy"] },
-  { image: img6, logo: tamglassLogo, make: "Finland", process: "Bending", desc: ["Engineered bending lines","Uniform curvature","Minimal distortion"] },
-  { image: img7, logo: northGlassLogo, make: "China", process: "Bending", desc: ["Precision control","Architectural glass","High reliability"] },
-  { image: img8, logo: northGlassLogo, make: "China", process: "Bending", desc: ["High-volume output","Consistent quality","Dimensional accuracy"] },
-  { image: img9, logo: glastonLogo, make: "Finland", process: "Deairing", desc: ["Vacuum deairing","No air bubbles","Perfect lamination"] },
-  { image: img10, logo: glastonLogo, make: "Finland", process: "Autoclave", desc: ["High-pressure bonding","Maximum strength","Durable lamination"] },
-  { image: img11, logo: northGlassLogo, make: "China", process: "Autoclave", desc: ["Uniform bonding","Industrial scale","Quality consistency"] },
-  { image: img12, logo: northGlassLogo, make: "China", process: "Bending", desc: ["Optimized workflow","Scalable production","High efficiency"] },
-  { image: img13, logo: northGlassLogo, make: "China", process: "Cutting", desc: ["High-speed cutting","Low material waste","Tight tolerances"] },
-  { image: img14, logo: northGlassLogo, make: "USA", process: "Cutting", desc: ["Precision edges","Clean finish","Demanding applications"] },
-  { image: img15, logo: northGlassLogo, make: "China", process: "Flat Lamination", desc: ["Safety glass","High strength","Uniform bonding"] },
+  {
+    image: img1,
+    logo: bandoLogo,
+    make: "Japan",
+    process: "Cut & Grinding",
+    desc: [
+      "High-precision CNC cutting",
+      "Smooth edge grinding",
+      "Accurate dimensions",
+    ],
+  },
+  {
+    image: img2,
+    logo: joisonLogo,
+    make: "China",
+    process: "Screen Printing",
+    desc: ["Automated ceramic printing", "Uniform patterns", "Long durability"],
+  },
+  {
+    image: img3,
+    logo: joisonLogo,
+    make: "China",
+    process: "Enamel Drying",
+    desc: ["IR Dryer,", "Controlled Process,", "Proper Querying"],
+  },
+  {
+    image: img4,
+    logo: tamglassLogo,
+    make: "Finland",
+    process: "Bending(Windshield)",
+    desc: [" Receipe Controlled Programme", "Precise Bending Profile", "Achieve CpK > 1.33"],
+  },
+  {
+    image: img5,
+    logo: tamglassLogo,
+    make: "Finland",
+    process: "Bending(Windshield)",
+    desc: [" Receipe Controlled Programme", "Precise Bending Profile", "Achieve CpK > 1.33"],
+  },
+  {
+    image: img6,
+    logo: tamglassLogo,
+    make: "Finland",
+    process: "Bending - Bus WindShield",
+    desc: [
+      "Receipe Controlled Programme",
+      "Achieve Complex profile curvature",
+      "Fully Automatic",
+    ],
+  },
+  {
+    image: img7,
+    logo: northGlassLogo,
+    make: "China",
+    process: "Bending -Toughned Glass",
+    desc: ["roller bending Process", "Receipe Controlled Programme", "High repetablity and dimensional accuracy"],
+  },
+  {
+    image: img8,
+    logo: northGlassLogo,
+    make: "China",
+    process: "Bending -Toughned Glass",
+    desc: ["roller bending Process", "Receipe Controlled Programme", "High repetablity and dimensional accuracy"],
+  },
+  {
+    image: img9,
+    logo: glastonLogo,
+    make: "Finland",
+    process: "Lamination and Deairing",
+    desc: ["Vacuum deairing", "Pokayoke Process", "Controlled Environment"],
+  },
+  {
+    image: img10,
+    logo: glastonLogo,
+    make: "Finland",
+    process: "Autoclave",
+    desc: ["Digitally Program-Controlled Process (Temperature & Pressure)", "Uniform Heat Penetration", "Continuous Monitoring and Ensured Safety"],
+  },
+  
 ];
 
 /* ANIMATION */
@@ -74,7 +143,7 @@ const cardVariants = {
 const MotionCard = motion.create(Card);
 
 /* COMPONENT */
-export default function ManufacturingPremium() {
+export default function Manufacturing_Excellence() {
   return (
     <>
       {/* HERO */}
@@ -83,21 +152,26 @@ export default function ManufacturingPremium() {
         <Box className="mc-hero-overlay">
           <Box>
             <h1 className="mc-hero-title">Manufacturing Excellence</h1>
-            <p className="mc-hero-subtitle">Precision • Automation • Global Standards</p>
+            <p className="mc-hero-subtitle">
+              Precision • Automation • Global Standards
+            </p>
           </Box>
         </Box>
       </Box>
 
       {/* CARDS */}
       <Container maxWidth="lg" className="mc-container">
-        <Grid container spacing={5}>
+        <Grid container direction="column" spacing={5}>
           {cardData.map((item, index) => {
             const reverse = index % 2 !== 0;
 
             return (
-              <Grid item xs={12} key={index}>
+              <Grid item xs={12} md={12} lg={12} key={index}>
                 <MotionCard
                   className="mc-card"
+                  sx={{
+                    background: "linear-gradient(135deg, #f1f4f6, #979899)", // 👈 CARD COLOR HERE
+                  }}
                   custom={reverse ? "right" : "left"}
                   variants={cardVariants}
                   initial="hidden"
@@ -107,20 +181,31 @@ export default function ManufacturingPremium() {
                   <Box
                     className="mc-zigzag"
                     sx={{
-                      flexDirection: { xs: "column", md: reverse ? "row-reverse" : "row" },
+                      flexDirection: {
+                        xs: "column",
+                        md: reverse ? "row-reverse" : "row",
+                      },
                     }}
                   >
                     {/* IMAGE */}
                     <Box className="mc-image-wrap">
-                      <CardMedia component="img" image={item.image} className="mc-image" />
+                      <CardMedia
+                        component="img"
+                        image={item.image}
+                        className="mc-image"
+                      />
                       <div className="mc-image-badge">{item.process}</div>
                     </Box>
 
                     {/* CONTENT */}
                     <CardContent className="mc-content">
                       <img src={item.logo} className="mc-logo" alt="" />
-                      <Typography className="mc-make">MAKE: {item.make}</Typography>
-                      <Typography className="mc-process">PROCESS: {item.process}</Typography>
+                      <Typography className="mc-make">
+                        MAKE: {item.make}
+                      </Typography>
+                      <Typography className="mc-process">
+                        PROCESS: {item.process}
+                      </Typography>
 
                       <ul className="mc-desc">
                         {item.desc.map((p, i) => (

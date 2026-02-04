@@ -7,7 +7,7 @@ import processImg from "../assets/Images/VLT-image-1.webp";
 
 const SidelitesDoorGlass = () => {
   return (
-    <div className="sidelite-root">
+      <div className="sidelite-root">
 
       {/* ================= HERO ================= */}
       <section
@@ -94,7 +94,7 @@ const SidelitesDoorGlass = () => {
 
 
     </div>
-  );
-};
+  )
+}
 
 export default SidelitesDoorGlass;

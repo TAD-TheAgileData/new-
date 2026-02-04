@@ -13,26 +13,26 @@ const StrategicDrivers = () => {
       title: "Sustainability",
       icon: <FaLeaf />,
       desc:
-        "Technoglass is committed to sustainable practices that reduce environmental impact and promote responsible use of resources for long-term growth.",
+        "Technoglass is committed to sustainable practices that reduce environmental impact and promote responsible use of resources for long-term growth."
     },
     {
       title: "Profitability & Competitiveness",
       icon: <FaChartLine />,
       desc:
-        "We focus on improving efficiency, innovation, and cost management to remain competitive while achieving strong financial performance.",
+        "We focus on improving efficiency, innovation, and cost management to remain competitive while achieving strong financial performance."
     },
     {
       title: "People Development",
       icon: <FaUsers />,
       desc:
-        "Our people are our strength. We invest in continuous learning, collaboration, and skill development to build a high-performing workforce.",
+        "Our people are our strength. We invest in continuous learning, collaboration, and skill development to build a high-performing workforce."
     },
     {
       title: "Customer Satisfaction",
       icon: <FaSmile />,
       desc:
-        "Customer satisfaction is at the heart of our strategy. We consistently deliver quality products and reliable service to build lasting trust.",
-    },
+        "Customer satisfaction is at the heart of our strategy. We consistently deliver quality products and reliable service to build lasting trust."
+    }
   ];
 
   return (

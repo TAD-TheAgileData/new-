@@ -1,4 +1,4 @@
-:root {
+.bcx-root {
   --dark: #0a0f1c;
   --light: #f8fafc;
   --panel: #ffffff;
@@ -12,9 +12,7 @@
   --shadow-soft: 0 25px 70px rgba(15,23,42,0.18);
 }
 
-
 /* ================= HERO ================= */
-/* ================= FULL HERO ================= */
 .bcx-hero-full {
   position: relative;
   height: 100vh;
@@ -67,7 +65,7 @@
 }
 
 .bcx-hero-content h1 {
-  font-size: 4.2rem;
+  font-size: 3.6rem;
   font-weight: 600;
   line-height: 1.15;
   margin-bottom: 22px;
@@ -75,7 +73,7 @@
 }
 
 .bcx-hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #e5e7eb;
   max-width: 560px;
@@ -98,7 +96,7 @@
   }
 
   .bcx-hero-content p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -137,14 +135,14 @@
 }
 
 .bcx-float-card h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 16px;
   color: #0f172a;
   letter-spacing: -0.02em;
 }
 
 .bcx-float-card p {
-  font-size: 1.1rem;
+  font-size: 1.75rem;
   line-height: 1.8;
   color: #475569;
   max-width: 720px;
@@ -162,7 +160,7 @@
   }
 
   .bcx-float-card h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -190,7 +188,7 @@
 }
 
 .bcx-rail-item h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   margin-bottom: 16px;
 }
 
@@ -237,7 +235,7 @@
 }
 
 .bcx-statement-box li {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 18px;
   padding-left: 28px;
   position: relative;

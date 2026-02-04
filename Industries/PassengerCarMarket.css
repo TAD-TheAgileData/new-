@@ -1,7 +1,7 @@
 /* =====================================================
    ROOT + VARIABLES
 ===================================================== */
-:root {
+.pcm-root {
   --pcm-primary: #0284c7;
   --pcm-accent: #38bdf8;
   --pcm-dark: #020617;
@@ -12,6 +12,7 @@
   --pcm-shadow-lg: 0 40px 80px rgba(15, 23, 42, 0.15);
   --pcm-shadow-xl: 0 80px 160px rgba(2, 132, 199, 0.25);
 }
+
 
 .pcm-root {
   font-family: "Inter", "SF Pro Display", system-ui, sans-serif;
@@ -63,7 +64,7 @@
 
 /* EYEBROW */
 .pcm-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.35em;
   font-weight: 600;
   color: #7dd3fc;
@@ -71,8 +72,8 @@
 
 /* HEADING */
 .pcm-hero h1 {
-  font-size: 4.4rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
   line-height: 1.12;
   margin: 26px 0;
   color: #ffffff;
@@ -86,7 +87,7 @@
 
 /* DESCRIPTION */
 .pcm-hero p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.85;
   color: #e5e7eb;
   max-width: 620px;
@@ -233,7 +234,7 @@
 }
 
 .pcm-zigzag-content p {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.75;
   color: #475569;
 }
@@ -280,7 +281,7 @@
 }
 
 .pcm-eyebrow {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.35em;
   font-weight: 600;
   color: #0284c7;
@@ -294,7 +295,7 @@
 }
 
 .pcm-strengths-header p {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: #475569;
   line-height: 1.7;
 }
@@ -362,13 +363,13 @@
 
 /* TEXT */
 .pcm-strength-card h4 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 12px;
   color: #020617;
 }
 
 .pcm-strength-card p {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   line-height: 1.65;
   color: #475569;
 }
@@ -412,7 +413,7 @@
 }
 
 .pcm-markets-sub {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: #475569;
 }
@@ -469,13 +470,13 @@
 
 /* TEXT */
 .pcm-market-card h4 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-bottom: 10px;
   color: #020617;
 }
 
 .pcm-market-card p {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   color: #475569;
 }

@@ -19,7 +19,7 @@ import capabilityImg from "../../assets/Images/VLT-image-1.webp";
 import autoclaveImg from "../../assets/Images/VLT-image-1.webp";
 import qualityImg from "../../assets/Images/VLT-image-1.webp";
 
-export default function LaminatedGlass() {
+export default function LaminatedGlassManufacturing() {
   return (
     <div className="laminated-page">
 
@@ -78,7 +78,7 @@ export default function LaminatedGlass() {
               </div>
             </div>
 
-            <Link to="/pvb-details" className="explore-link">
+            <Link to="/services/laminated-glass/pvb-lamination" className="explore-link">
               Explore <ArrowRight />
             </Link>
           </div>
@@ -187,7 +187,7 @@ export default function LaminatedGlass() {
               </div>
             </div>
 
-            <Link to="/autoclave-process" className="explore-link">
+            <Link to="/services/laminated-glass/autoclave-capacity" className="explore-link">
               Explore <ArrowRight />
             </Link>
           </div>
@@ -229,7 +229,7 @@ export default function LaminatedGlass() {
               </div>
             </div>
 
-            <Link to="/quality-standards" className="explore-link">
+            <Link to="/services/laminated-glass/optical-quality-control" className="explore-link">
               Explore <ArrowRight />
             </Link>
 

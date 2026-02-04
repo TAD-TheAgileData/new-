@@ -6,7 +6,6 @@ import heroImg from "../../assets/Images/VLT-image-1.webp";
 import chairmanImg from "../../assets/Images/VLT-image-1.webp";
 import mdImg from "../../assets/Images/VLT-image-1.webp";
 
-/* ====== COLORS ====== */
 const COLORS = {
   white: "#FFFFFF",
   frost: "#6B7280",

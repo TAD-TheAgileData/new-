@@ -44,15 +44,15 @@
 }
 
 .mbp-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #7dd3fc;
 }
 
 .mbp-hero h1 {
-  font-size: 4.2rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
   line-height: 1.15;
   margin: 24px 0;
   letter-spacing: -0.02em;
@@ -63,7 +63,7 @@
 }
 
 .mbp-hero p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #e5e7eb;
   max-width: 600px;
@@ -82,7 +82,7 @@
 }
 
 .mbp-section-header p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   max-width: 520px;
   color: #475569;
   margin-top: 12px;
@@ -125,12 +125,12 @@
 }
 
 .mbp-glass-card h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 12px;
 }
 
 .mbp-glass-card p {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: #475569;
   line-height: 1.6;
 }
@@ -167,13 +167,13 @@
 }
 
 .mbp-strength-card h4 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-top: 18px;
   margin-bottom: 10px;
 }
 
 .mbp-strength-card p {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   color: #475569;
   line-height: 1.6;
 }
@@ -196,7 +196,7 @@
   border-radius: 999px;
   background: #ffffff;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   transition: all 0.35s ease;
 }
 

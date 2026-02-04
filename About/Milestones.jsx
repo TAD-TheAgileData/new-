@@ -3,14 +3,11 @@ import { motion } from "framer-motion";
 import "./Milestones.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-/* MOTION ELEMENTS */
 const MotionDiv = motion.create("div");
 const MotionImg = motion.create("img");
 
-/* HERO */
+/* ================= ASSETS (deferred) ================= */
 import heroImage from "../../assets/Images/VLT-image-1.webp";
-
-/* IMAGES */
 import foundation from "../../assets/Images/VLT-image-1.webp";
 import Construction from "../../assets/Images/VLT-image-1.webp";
 import Automotiveproductive from "../../assets/Images/VLT-image-1.webp";
@@ -25,8 +22,26 @@ import Japan_Market_Expansion from "../../assets/Images/VLT-image-1.webp";
 import Architecturalglassline from "../../assets/Images/VLT-image-1.webp";
 import expanding_into_asia from "../../assets/Images/VLT-image-1.webp";
 import Temperingline from "../../assets/Images/VLT-image-1.webp";
+import plantexpansion from "../../assets/Images/VLT-image-1.webp";
+import SAFlamination from "../../assets/Images/VLT-image-1.webp";
+import Isologo from "../../assets/Images/VLT-image-1.webp";
+import curved from "../../assets/Images/VLT-image-1.webp";
+import Capacity from "../../assets/Images/VLT-image-1.webp";
+import ArchietecturalExpansion from "../../assets/Images/VLT-image-1.webp";
+import Busglass from "../../assets/Images/VLT-image-1.webp";
+import Temperingfurnance from "../../assets/Images/VLT-image-1.webp";
+import Bandoline from "../../assets/Images/VLT-image-1.webp";
+import Certificateachieved from "../../assets/Images/VLT-image-1.webp";
+import Awarded from "../../assets/Images/VLT-image-1.webp";
+import Collaboration from "../../assets/Images/VLT-image-1.webp";
+import Polishing from "../../assets/Images/VLT-image-1.webp";
+import snamcertification from "../../assets/Images/VLT-image-1.webp";
+import Discussion from "../../assets/Images/VLT-image-1.webp";
+import IATF169 from "../../assets/Images/VLT-image-1.webp";
+import Ceer_psa from "../../assets/Images/VLT-image-1.webp";
+import Success from "../../assets/Images/VLT-image-1.webp";
+import Achievement from "../../assets/Images/VLT-image-1.webp";
 
-/* IMAGE MAP */
 const imageMap = {
   "foundation.jpg": foundation,
   "Construction.jpg": Construction,
@@ -36,15 +51,32 @@ const imageMap = {
   "MENA_Export.jpg": MENA_Export,
   "Certification_Achieved.jpg": Certification_Achieved,
   "ExportNAmerica.jpg": ExportNAmerica,
-  "Europeanmarketentry.jpg": Europeanmarketentry,
   "ECRCertified.jpg": ECRCertified,
+  "Europeanmarketentry.jpg": Europeanmarketentry,
   "Japan_Market_Expansion.jpg": Japan_Market_Expansion,
   "Architecturalglassline.jpg": Architecturalglassline,
   "expanding-into-asia.jpg": expanding_into_asia,
   "Tempering_Line.jpg": Temperingline,
+  "Plantexpansion.webp": plantexpansion,
+  "SAFLaminated.JPG": SAFlamination,
+  "ISOStandard.jpg": Isologo,
+  "Curvedglassfurnace.JPG": curved,
+  "CapacityEnhancement.jpg": Capacity,
+  "ArchietecturalExpansion.jpg": ArchietecturalExpansion,
+  "BusglassBending.webp": Busglass,
+  "Temperingfurnance.jpg": Temperingfurnance,
+  "Bandoline.webp": Bandoline,
+  "Certificateachieved.jpg": Certificateachieved,
+  "Awarded.jpg": Awarded,
+  "Collaboration.jpg": Collaboration,
+  "Polishing.jpg": Polishing,
+  "snamcertification.jpg": snamcertification,
+  "Discussion.jpg": Discussion,
+  "Success.jpg": Success,
+  "Achievement.jpg": Achievement,
+  "IATF16949.jpg": IATF169,
 };
 
-/* FILTERS */
 const filters = [
   { label: "All", value: "all" },
   { label: "1990s", value: "1990" },
@@ -53,7 +85,6 @@ const filters = [
   { label: "2020s", value: "2020" },
 ];
 
-/* DATA (UNCHANGED) */
 const milestones = [
   {
     year: "1991",
@@ -261,12 +292,10 @@ const milestones = [
   },
 ];
 
-
-
 /* ================= COMPONENT ================= */
 export default function Milestones() {
   const [filter, setFilter] = useState("all");
-   const [zoomImage, setZoomImage] = useState(null); // ✅ HERE
+  const [zoomImage, setZoomImage] = useState(null); // ✅ HERE
   const filteredData =
     filter === "all"
       ? [...milestones].sort((a, b) => b.year - a.year)
@@ -348,32 +377,30 @@ export default function Milestones() {
 
                 <p>{item.desc}</p>
 
-               <MotionImg
-  src={imageMap[item.image]}
-  className="timeline-image"
-  whileHover={{ scale: 1.06 }}
-  transition={{ duration: 0.6 }}
-  onClick={() => setZoomImage(imageMap[item.image])}
-  style={{ cursor: "zoom-in" }}
-/>
-
+                <MotionImg
+                  src={imageMap[item.image]}
+                  className="timeline-image"
+                  whileHover={{ scale: 1.06 }}
+                  transition={{ duration: 0.6 }}
+                  onClick={() => setZoomImage(imageMap[item.image])}
+                  style={{ cursor: "zoom-in" }}
+                />
               </MotionDiv>
             </MotionDiv>
           );
         })}
       </div>
       {zoomImage && (
-  <div className="image-zoom-overlay" onClick={() => setZoomImage(null)}>
-    <motion.img
-      src={zoomImage}
-      className="image-zoomed"
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.3 }}
-    />
-  </div>
-)}
-
+        <div className="image-zoom-overlay" onClick={() => setZoomImage(null)}>
+          <motion.img
+            src={zoomImage}
+            className="image-zoomed"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      )}
     </section>
   );
 }

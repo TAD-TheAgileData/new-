@@ -188,24 +188,24 @@ const container = () => ({ maxWidth: 1100, margin: "auto", padding: "80px 16px" 
 /* HERO */
 const heroSection = (img) => ({ height: 360, background: `url(${img}) center/cover no-repeat` });
 const heroOverlay = () => ({ height: "100%", background: "rgba(15,23,42,0.6)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" });
-const heroTitle = () => ({ color: "#fff", fontSize: "3rem", fontWeight: 800 });
-const heroSubtitle = () => ({ color: COLORS.ice, marginTop: 12 });
+const heroTitle = () => ({ color: "#fff", fontSize: "3.5rem", fontWeight: 800 });
+const heroSubtitle = () => ({ fontSize: 30, color: COLORS.ice, marginTop: 12 });
 
 /* OVERVIEW */
 const overviewCard = () => ({ borderRadius: 26, padding: 42, marginBottom: 70, border: `1px solid ${COLORS.steel}`, boxShadow: "0 25px 70px rgba(0,0,0,0.12)" });
-const sectionTitle = () => ({ fontSize: "2rem", fontWeight: 800, color: COLORS.navy, marginBottom: 12 });
-const sectionText = () => ({ fontSize: "1.2rem", color: COLORS.frost, lineHeight: 1.8 });
+const sectionTitle = () => ({ fontSize: "2.75rem", fontWeight: 800, color: COLORS.navy, marginBottom: 12 });
+const sectionText = () => ({ color: COLORS.frost, lineHeight: 1.8 });
 
 /* PLANTS */
 const plantGrid = () => ({ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 32, marginBottom: 50 });
 const plantCard = () => ({ background: "#fff", borderRadius: 24, overflow: "hidden", border: `1px solid ${COLORS.steel}`, boxShadow: "0 20px 55px rgba(0,0,0,0.1)" });
 const plantImg = () => ({ width: "100%", height: 240, objectFit: "cover" });
-const plantContent = () => ({ fontSize: "1.1rem", padding: 26 });
-const plantTitle = () => ({ fontSize: "1.5 rem", fontWeight: 700, color: COLORS.navy });
+const plantContent = () => ({ padding: 26 });
+const plantTitle = () => ({ fontWeight: 800, color: COLORS.navy });
 const plantLocation = () => ({ color: COLORS.primary, fontWeight: 600 });
 
 /* CAPABILITIES */
 const capabilityGrid = () => ({ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 28, marginBottom: 80 });
 const capabilityCard = () => ({ padding: 32, borderRadius: 22, border: `1px solid ${COLORS.steel}`, boxShadow: "0 18px 45px rgba(0,0,0,0.08)" });
-const capabilityTitle = () => ({ fontSize: "1.1 rem",fontWeight: 700, color: COLORS.navy });
-const capabilityText = () => ({ fontSize: "1.5 rem", color: COLORS.frost, lineHeight: 1.7 });
+const capabilityTitle = () => ({ fontWeight: 800, color: COLORS.navy });
+const capabilityText = () => ({ color: COLORS.frost, lineHeight: 1.7 });

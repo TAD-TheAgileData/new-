@@ -20,8 +20,8 @@ import visionImg from "../../assets/Images/VLT-image-1.webp";
 import missionImg from "../../assets/Images/VLT-image-1.webp";
 
 /* ================= COLOR CONTROL (CHANGE ONLY HERE) ================= */
-const PAGE_BG_COLOR = "#eef2f7";   // page background
-const CARD_BG_COLOR = "#756565";   // all cards background
+const PAGE_BG_COLOR = "#c7d7dcc6"; // page background
+const CARD_BG_COLOR = "#d5d3d3"; // all cards background
 /* ================= ANIMATIONS ================= */
 const cardEntrance = {
   hidden: { opacity: 0, y: 80, scale: 0.95 },
@@ -113,7 +113,7 @@ const Vision = () => {
               <Grid container spacing={6} alignItems="center" wrap="nowrap">
                 <Grid item xs={6}>
                   <Typography
-  fontWeight={900}
+  fontWeight={800}
   color="#176179"
   sx={{
     fontSize: { xs: "2rem", md: "2.6rem" }, // 🔥 BIG TITLE

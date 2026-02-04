@@ -1,26 +1,25 @@
-:root {
+.cv-root {
   --bg-dark: #0b1220;
   --bg-light: #f8fafc;
   --text-dark: #0f172a;
   --text-muted: #475569;
   --accent: #f97316;
   --ease: cubic-bezier(0.4,0,0.2,1);
-}
 
-/* ================= ROOT ================= */
-.cv-root {
   font-family: "Poppins", sans-serif;
   background: var(--bg-light);
   color: var(--text-dark);
 }
-
 /* ================= HERO ================= */
 .cv-hero {
+  width: 100%;
   height: 92vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
+
 
 @keyframes heroZoom {
   from { background-size: 100%; }
@@ -62,12 +61,12 @@
 }
 
 .cv-hero-content h1 {
-  font-size: 3.3rem;
+  font-size: 3.5rem;
   margin-bottom: 22px;
 }
 
 .cv-hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #e5e7eb;
 }

@@ -9,7 +9,9 @@ import iso45001 from "../../assets/Images/VLT-image-1.webp";
 import iso14001 from "../../assets/Images/VLT-image-1.webp";
 import fssc from "../../assets/Images/VLT-image-1.webp";
 import encon from "../../assets/Images/VLT-image-1.webp";
-
+// import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
+// import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
+import Copcertificate from "../../assets/Images/VLT-image-1.webp";
 /* DATA */
 const certCards = [
   {
@@ -71,7 +73,7 @@ const certCards = [
   {
     title: "Global Tier-1 Partnership for Strategic Materials",
     subtitle: "Strategic partnerships with global suppliers.",
-    image: encon,
+    
     desc: `Raw Glass:
 ➤ Guardian – Thailand  
 ➤ Asahi – China  
@@ -81,10 +83,12 @@ PVB:
 ➤ Eastman Saflex – Belgium  
 ➤ Trosifol – Germany  
 ➤ Sekisui – Japan  
+➤ KingBoard – China
 
 Black Ceramic:
 ➤ Ferro – Germany  
-➤ Torrecid – Spain`,
+➤ Torrecid – Spain
+➤ Octopus – China`,
   },
 ];
 
@@ -164,35 +168,42 @@ export default function Certifications() {
         />
         <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.75)" }} />
 
-        <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
+        {/* <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
           <Typography variant="h2" fontWeight={900} color="#fff">
             Certifications & Compliance
           </Typography>
           <Typography variant="h6" color="#cbd5f5" maxWidth={640}>
             International standards ensuring quality, safety, and sustainability.
           </Typography>
-        </Container>
+        </Container> */}
       </Box>
 
       {/* CONTENT */}
       <Container maxWidth="lg" sx={{ py: 16 }}>
         {certCards.map((item, index) => {
           const reverse = index % 2 !== 0;
-
+ const hasImage = Boolean(item.image);
           return (
-            <Grid
-              container
-              spacing={8}
-              key={index}
-              direction={reverse ? "row-reverse" : "row"}
-              alignItems="center"
-              sx={{ mb: 14 }}
-            >
-              <Grid item xs={12} md={4}>
-                <CertificationImageZoom item={item} />
-              </Grid>
+          
 
-              <Grid item xs={12} md={8}>
+<Grid
+  container
+  spacing={8}
+  key={index}
+  direction={hasImage && reverse ? "row-reverse" : "row"}
+  alignItems="center"
+  sx={{ mb: 14 }}
+>
+
+              {item.title !== "Global Tier-1 Partnership for Strategic Materials" && (
+  <Grid item xs={12} md={4}>
+    <CertificationImageZoom item={item} />
+  </Grid>
+)}
+
+
+              <Grid item xs={12} md={hasImage ? 8 : 12}>
+
                 <motion.div whileHover={{ y: -6 }}>
                   <Box
   sx={{

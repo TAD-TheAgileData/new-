@@ -12,9 +12,10 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import heroImage from "../../assets/Images/VLT-image-1.webp";
-
 const MotionBox = motion(Box);
-const CARD_BG_COLOR = "#aebebea1"
+const CARD_BG_COLOR = "#aebebea1";
+
+
 /* Regions for modal */
 const regions = [
   {
@@ -71,9 +72,21 @@ const testimonials = [
   },
 ];
 const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "Helvetica Neue",
+      "Montserrat",
+      "Futura",
+      "Roboto",
+      "Avenir",
+      "Helvetica",
+      "Arial",
+      "sans-serif",
+    ].join(","),
+  },
   palette: {
     background: {
-      default: "#f4f86f8",
+      default: "#F4F6F8",
     },
   },
 });
@@ -113,7 +126,7 @@ export default function GlobalReach() {
       {/* ================= HERO ================= */}
       <Box
         sx={{
-          height: { xs: "65vh", md: "80vh" },
+          height: { xs: "90vh", md: "90vh" },
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -284,7 +297,25 @@ export default function GlobalReach() {
                     >
                       {item.title}
                     </Typography>
-                    <Typography color="grey.700" sx={{ mb: 3 }}>
+                    <Typography
+                      sx={{
+                        mb: 3,
+                        px: 2.5,
+                        py: 1.8,
+                        borderRadius: 3,
+                        background:
+                          "linear-gradient(180deg, rgba(23,97,121,0.18), rgba(23,97,121,0.28))",
+                        backdropFilter: "blur(6px)",
+                        border: "1px solid rgba(15,23,42,0.08)",
+                        color: "#374151",
+                        fontSize: "0.95rem",
+                        lineHeight: 1.7,
+                        "&:hover": {
+                          background:
+                            "linear-gradient(180deg, rgba(255,255,255,0.9), rgba(229,231,235,1))",
+                        },
+                      }}
+                    >
                       {item.desc}
                     </Typography>
 
@@ -344,7 +375,20 @@ export default function GlobalReach() {
             >
               From Factory to Global Roads
             </Typography>
-            <Typography color="grey.700">
+            <Typography
+              sx={{
+                mt: 2,
+                px: 3,
+                py: 2,
+                borderRadius: 3,
+                background:
+                  "linear-gradient(180deg, rgba(23,97,121,0.18), rgba(23,97,121,0.28))",
+                border: "1px solid rgba(23,97,121,0.35)",
+                color: "#0e2c6e",
+                fontSize: "0.95rem",
+                lineHeight: 1.8,
+              }}
+            >
               A structured delivery framework integrating engineering,
               certification, manufacturing, and global logistics.
             </Typography>
@@ -384,9 +428,18 @@ export default function GlobalReach() {
                   <Typography sx={{ fontSize: "3rem", color: "#2563EB" }}>
                     “
                   </Typography>
-                  <Typography sx={{ color: "grey.700", mb: 4 }}>
+                  <Typography
+                    sx={{
+                      mb: 4,
+                      color: "#0e2c6e",
+                      fontWeight: 500,
+                      lineHeight: 1.9,
+                      letterSpacing: "0.2px",
+                    }}
+                  >
                     {item.review}
                   </Typography>
+
                   <Typography fontWeight={800} sx={{ color: "#0e2c6e" }}>
                     {item.name}
                   </Typography>

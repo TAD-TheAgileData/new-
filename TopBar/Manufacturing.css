@@ -21,13 +21,15 @@
 
 .mc-hero-title {
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
 }
 
 .mc-hero-subtitle {
   color: #ddd;
   letter-spacing: 1px;
+  font-size: 2rem;
+  margin-top: 6px;
 }
 
 /* ================= PAGE ================= */
@@ -38,138 +40,41 @@
 /* ================= CARD ================= */
 .mc-card {
   width: 100%;
-  height: 100%;
   border-radius: 18px;
   overflow: hidden;
-  background: #fff;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
 }
-/* ================= STACK LAYOUT ================= */
+
+/* ================= ZIG-ZAG LAYOUT ================= */
 .mc-zigzag {
   display: flex;
-  flex-direction: column; /* 🔑 image top, content below */
   width: 100%;
-  height: 100%;
+  align-items: stretch;
 }
 
-/* ================= IMAGE WRAP ================= */
-.mc-image-wrap {
-  position: relative;
-  width: 100%;
-  height: 240px;
-}
-
-/* IMAGE */
-.mc-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* ================= BADGE ================= */
-.mc-image-badge {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
-  padding: 8px 16px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border-radius: 20px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-/* ================= CONTENT ================= */
-/* ================= CONTENT ================= */
-.mc-content {
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* horizontal center */
-  justify-content: center;  /* vertical center */
-  text-align: center;
-  gap: 14px;
-}
-
-
-/* LOGO */
-.mc-logo {
-  height: 38px;
-  margin-bottom: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* TEXT */
-.mc-make {
-  font-size: 0.85rem;
-  color: #777;
-}
-
-.mc-process {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-
-/* ================= BULLETS ================= */
-.mc-desc {
-  padding-left: 0;
-  margin-top: 20px;
-}
-
-.mc-desc li {
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  font-size: 0.92rem;
-  line-height: 1.4;
-  margin-bottom: 6px;
-}
-
-.mc-bullet-icon {
-  color: #007bff;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .mc-zigzag {
-    flex-direction: column;
-  }
-
-  .mc-image,
-  .mc-content {
-    width: 100%;
-  }
-
-  .mc-image {
-    height: 220px;
-  }
-}
-/* ================= IMAGE WRAP ================= */
+/* ================= IMAGE SECTION ================= */
 .mc-image-wrap {
   position: relative;
   width: 50%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-/* IMAGE */
 .mc-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ================= BADGE ================= */
+/* ================= IMAGE BADGE ================= */
 .mc-image-badge {
   position: absolute;
   bottom: 18px;
   left: 18px;
   background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
+  color: #ffffff;
   padding: 8px 16px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -178,10 +83,173 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* MOBILE */
+/* ================= CONTENT SECTION ================= */
+.mc-content {
+  width: 50%;
+  padding: 40px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 14px;
+}
+
+/* LOGO */
+.mc-logo {
+  height: 46px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.mc-make {
+  font-size: 1rem;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+.mc-process {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+/* ================= BULLET LIST ================= */
+.mc-desc {
+  padding: 0;
+  margin-top: 14px;
+}
+
+.mc-desc li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;   /* 🔑 FIXED ICON ALIGNMENT */
+  gap: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.mc-bullet-icon {
+  color: #007bff;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 4px;           /* aligns with first text line */
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+  .mc-zigzag {
+    flex-direction: column;
+  }
+
   .mc-image-wrap {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .mc-content {
+    width: 100%;
+    padding: 20px 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mc-logo {
+    height: 42px;
+  }
+
+  .mc-make {
+    font-size: 0.8rem;
+  }
+
+  .mc-process {
+    font-size: 1rem;
+  }
+
+  .mc-desc li {
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+
+/* ================= TABLET (CORRECTED) ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .mc-zigzag {
+    flex-direction: column;   /* 🔥 FIXED */
+  }
+
+  .mc-image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .mc-content {
+    width: 100%;
+    padding: 28px 40px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .mc-logo {
+    height: 48px;
+  }
+
+  .mc-zigzag {
+    flex-direction: column;
+  }
+
+  /* 🔥 LIMIT IMAGE HEIGHT ON iPAD */
+  .mc-image-wrap {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 260px;             /* ✅ KEY FIX */
+  }
+
+  .mc-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 🔥 SEPARATION FIX */
+  .mc-content {
+    width: 100%;
+    padding: 24px 40px 32px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* 🔥 KEEP CARD FEEL COMPACT */
+  .mc-card {
+    overflow: hidden;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+
+  .mc-zigzag {
+    flex-direction: row;
+  }
+
+  .mc-image-wrap {
+    width: 50%;
+  }
+
+  .mc-content {
+    width: 50%;
+    padding: 40px 42px;
+  }
+}
+
+/* ================= CENTER CARDS (MOBILE + TABLET) ================= */
+@media (max-width: 1024px) {
+  .mc-card {
+    max-width: 720px;
+    margin: auto;
   }
 }

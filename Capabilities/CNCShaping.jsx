@@ -91,6 +91,12 @@ const CNCShaping = () => {
           <span>Automotive Windshields</span>
           <span>Backlite</span>
           <span>Side Lite</span>
+          <span>Sunroof</span>
+          <span>Rear glass</span>
+          <span>Door glass</span>
+          <span>Quarter glass</span>
+          <span>Bus & Truck windshield</span>
+          <span>Marine Industries</span>
           <span>Custom Shapes</span>
         </div>
       </section>

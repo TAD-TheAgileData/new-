@@ -11,13 +11,12 @@ import {
 
 import heroImg from "../assets/Images/VLT-image-1.webp";
 import processImg from "../assets/Images/VLT-image-1.webp";
-
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0 }
 };
 
-export default function Sunroof() {
+export default function Sunroofs() {
   return (
     <div className="sunroof-root">
 

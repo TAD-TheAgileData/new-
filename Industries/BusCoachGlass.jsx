@@ -11,8 +11,8 @@ import {
 import heroImg from "../assets/Images/VLT-image-1.webp";
 import glassImg from "../assets/Images/VLT-image-1.webp";
 
-export default function BusCoachGlassPremium() {
-  return (
+export default function Bus_Coach() {
+return (
     <div className="bcx-root">
 
     {/* ================= FULL HERO ================= */}

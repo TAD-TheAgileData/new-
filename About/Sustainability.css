@@ -1,102 +1,136 @@
+:root {
+  --page-bg: #f2f6fb;        /* FULL PAGE BACKGROUND */
+  --section-bg: #eef2f7;    /* CONTENT SECTION BACKGROUND */
+  --card-bg: #e92222;       /* ALL CARD BACKGROUND */
+  --title-bg: #e1e8ef;      /* HEADER STRIP BACKGROUND */
+}
+
+
+
 /* ================= PAGE ================= */
 .sustainability-page {
-  font-family: "Inter", system-ui, sans-serif;
-  background: #f6f8fa;
-  color: #0f172a;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #181515;
 }
 
 /* ================= HERO ================= */
 .sustainability-hero {
-  height: 60vh;
+  height: 80vh;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .hero-overlay {
-  background: rgba(15, 23, 42, 0.65);
-  color: #ffffff;
-  text-align: center;
-  padding: 40px;
-  max-width: 900px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  color: #fff;
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 12px;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
 }
 
 .hero-overlay p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  max-width: 550px;
   line-height: 1.6;
-}
-
-/* ================= HEADER ================= */
-.commitment-header {
-  text-align: center;
-  padding: 70px 20px 40px;
-}
-
-.commitment-header h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #176179;
+  font-weight: 400;
 }
 
 /* ================= CONTENT ================= */
 .sustainability-content {
-  padding: 40px 8% 80px;
+  padding: 80px 8%;
+  background: linear-gradient(140deg,rgba(0,0,0,0),rgba(1, 1, 1, 0.442));
 }
 
 .content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 60px;
   align-items: center;
 }
 
+/* Image */
 .content-image img {
   width: 100%;
-  border-radius: 22px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* ================= TEXT BLOCK STYLE ================= */
+/* Text */
+.commitment-header {
+  background: #7a7c7e93;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.commitment-header h2 {
+  color: black;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+}
+
 .commitment-text {
+  background: linear-gradient(145deg, #ffffff, #5d60636a);
+  padding: 30px 40px;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Right side cards container */
+.commitment-cards {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 25px;
 }
 
-.commitment-item {
-  background: #ffffff;
-  padding: 28px 34px;
-  border-radius: 18px;
-  border-left: 5px solid #176179;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+/* Individual content cards */
+.commitment-card {
+  background: linear-gradient(145deg, #ffffff, #5d60636a);
+  padding: 25px 35px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.commitment-item p {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0f172a;
-  line-height: 1.6;
+.commitment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .content-wrapper {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .hero-overlay {
+    padding: 0 6%;
+    text-align: center;
   }
 
   .hero-overlay h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 
-  .commitment-header h2 {
-    font-size: 1.6rem;
+  .commitment-text {
+    font-size: 1.2rem;
   }
 }

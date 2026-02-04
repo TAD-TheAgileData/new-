@@ -10,7 +10,7 @@ import {
 import "./BendingCapabilities.css";
 
 import bendImg from "../../assets/Images/VLT-image-1.webp";
-
+import bendImg2 from "../../assets/Images/VLT-image-1.webp";
 /* ================= ANIMATIONS ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -68,7 +68,7 @@ export default function BendingCapabilities() {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.2 }}
     >
-      <img src={bendImg} alt="Automotive Glass Bending" />
+      <img src={bendImg1} alt="Automotive Glass Bending" />
     </motion.div>
   </motion.div>
 </section>
@@ -98,7 +98,7 @@ export default function BendingCapabilities() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="bc-image">
-            <img src={bendImg} alt="Glass Bending Process" />
+            <img src={bendImg2} alt="Glass Bending Process" />
           </motion.div>
         </motion.div>
       </section>

@@ -1,5 +1,6 @@
 /* ================= ROOT ================= */
-:root {
+/* ================= TG PAGE THEME ================= */
+.tg-page {
   --primary: #0f172a;
   --secondary: #e2e8f0;
   --accent: #0284c7;
@@ -9,6 +10,11 @@
 
   --shadow-soft: 0 25px 60px rgba(15,23,42,0.18);
   --shadow-strong: 0 40px 90px rgba(15,23,42,0.35);
+
+  background: var(--bg-main);
+  font-family: "Inter","Helvetica Neue",Arial,sans-serif;
+  overflow-x: hidden;
+  padding-top: 140px; /* if navbar is fixed */
 }
 
 /* ================= PAGE ================= */
@@ -16,6 +22,7 @@
   background: var(--bg-main);
   font-family: "Inter","Helvetica Neue",Arial,sans-serif;
   overflow-x: hidden;
+  padding: 10px;
 }
 
 /* ================= HERO ================= */
@@ -41,15 +48,15 @@
 }
 
 .tg-hero h1 {
-  font-size: clamp(2.8rem, 5vw, 3.8rem);
-  font-weight: 700;
+  font-size: clamp(2.9rem, 6vw, 3.6rem);
+  font-weight: 800;
   color: var(--primary);
   animation: heroFadeDown 1s ease forwards;
 }
 
 .tg-hero p {
   margin-top: 14px;
-  font-size: 1.15rem;
+  font-size: 1.45rem;
   color: #475569;
   animation: heroFadeUp 1.2s ease forwards;
 }
@@ -67,7 +74,7 @@
 }
 
 .tg-intro p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #475569;
 }
@@ -149,13 +156,13 @@
 
 /* ================= TEXT ================= */
 .tg-overlay h3 {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .tg-overlay p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   color: var(--secondary);
   margin-bottom: 22px;

@@ -49,7 +49,7 @@ export default function TemperedGlass() {
                 Convection furnaces supporting flat and bent tempering with
                 precise heat distribution.
               </p>
-              <Link to="/furnace-type" className="tg-explore">
+              <Link to="/services/tempered-glass/furnaces" className="tg-explore">
                 Explore <ArrowRight />
               </Link>
             </div>
@@ -65,7 +65,7 @@ export default function TemperedGlass() {
                 Accurate bending for car, truck, and bus glass with optical
                 consistency.
               </p>
-              <Link to="/bending-capabilities" className="tg-explore">
+              <Link to="/services/tempered-glass/bending" className="tg-explore">
                 Explore <ArrowRight />
               </Link>
             </div>
@@ -81,7 +81,7 @@ export default function TemperedGlass() {
                 Certified fragmentation patterns ensuring safety compliance
                 and controlled breakage.
               </p>
-              <Link to="/fragmentation-standards" className="tg-explore">
+              <Link to="/services/tempered-glass/fragmentation" className="tg-explore">
                 Explore <ArrowRight />
               </Link>
             </div>
