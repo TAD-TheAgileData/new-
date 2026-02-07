@@ -58,7 +58,7 @@
 }
 
 .tb-hero-content p {
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -86,12 +86,12 @@
 }
 
 .tb-metric h3 {
-  font-size: 1.4rem;
+  font-size: 1.54rem;
   margin-bottom: 12px;
 }
 
 .tb-metric p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--muted);
 }
 
@@ -123,20 +123,21 @@
 }
 
 .tb-testimonial-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--muted);
   margin-bottom: 20px;
 }
 
 .tb-testimonial-card span {
-  font-size: 0.9rem;
+  font-size: 1.45rem;
   color: var(--accent);
   font-weight: 500;
 }
 
 /* CASE STUDY */
 .tb-case {
+  font-size: 1.25rem;
   padding: 120px 10% 180px;
 }
 
@@ -157,9 +158,8 @@
   flex-direction: column;
 }
 
-.tb-test
-imonial-author span {
-  font-size: 1rem;
+.tb-testimonial-author span {
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--text);
 }
