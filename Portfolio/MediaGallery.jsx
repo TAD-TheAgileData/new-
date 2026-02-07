@@ -4,10 +4,12 @@ import "react-image-lightbox/style.css";
 import Lightbox from "react-image-lightbox";
 import "./MediaGallery.css";
 
-
+    //30+ years Manufacturing Excellence
 import Company1 from "../assets/Images/VLT-image-1.webp";
 import Company2 from "../assets/Images/VLT-image-1.webp";
 import Company3 from "../assets/Images/VLT-image-1.webp";
+
+  //media items
 import factory1 from "../assets/Images/VLT-image-1.webp";
 import machine1 from "../assets/Images/VLT-image-1.webp";
 import product1 from "../assets/Images/VLT-image-1.webp";
