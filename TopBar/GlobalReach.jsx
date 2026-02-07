@@ -291,9 +291,9 @@ export default function GlobalReach() {
                     />
 
                     <Typography
-                      variant="h6"
+                      variant="h5"
                       fontWeight={800}
-                      sx={{ color: "#0e2c6e", mb: 1 }}
+                      sx={{ color: "#0e2c6e", mb: 2 }}
                     >
                       {item.title}
                     </Typography>
@@ -331,11 +331,11 @@ export default function GlobalReach() {
                             <Box
                               sx={{
                                 p: 2,
-                                borderRadius: 3,
+                                borderRadius: 4,
                                 background: CARD_BG_COLOR,
 
                                 border: "1px solid #E5E7EB",
-                                fontWeight: 600,
+                                fontWeight: 400,
                                 boxShadow: "0 10px 25px rgba(2,6,23,0.06)",
                               }}
                             >
