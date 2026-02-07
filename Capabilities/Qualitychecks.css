@@ -1,5 +1,6 @@
 /* ================= ROOT ================= */
-:root {
+/* ================= QC PAGE THEME ================= */
+.qc-page {
   --primary: #0f172a;
   --secondary: #475569;
   --accent: #0284c7;
@@ -12,12 +13,16 @@
   --shadow-hover: 0 40px 90px rgba(15, 23, 42, 0.18);
 }
 
+
 /* ================= PAGE ================= */
 .qc-page {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
   color: var(--primary);
   overflow-x: hidden;
+
+  /* 🔥 IMPORTANT */
+  padding-top: 10px; /* navbar + topbar height */
 }
 
 /* ================= HERO ================= */
@@ -43,14 +48,14 @@
 }
 
 .qc-hero h1 {
-  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  font-size: clamp(3rem, 5vw, 3.8rem);
   font-weight: 700;
   animation: fadeDown 1s ease forwards;
 }
 
 .qc-hero p {
   margin-top: 14px;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--secondary);
   animation: fadeUp 1.2s ease forwards;
 }
@@ -68,7 +73,7 @@
 }
 
 .qc-intro p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--secondary);
 }
@@ -90,7 +95,7 @@
   position: relative;
   overflow: hidden;
 
-  background: var(--card-bg);
+  background: white;
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 48px 40px 42px;
@@ -137,7 +142,7 @@
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(2,132,199,0.35),
+    rgba(128, 132, 135, 0.35),
     transparent
   );
   
@@ -230,13 +235,13 @@
 .qc-card li:nth-child(3) { animation-delay: 0.55s; }
 
 .qc-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .qc-card p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--secondary);
   margin-bottom: 22px;
@@ -244,22 +249,22 @@
 
 /* ================= LIST ================= */
 .qc-card ul {
-   font-size: 1rem;
+   font-size: 1.25rem;
   list-style: none;
   padding: 0;
   margin-top: auto;
 }
 
 .qc-card li {
-   font-size: 1rem;
+   font-size: 1.25rem;
   display: flex;
   gap: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--secondary);
 }
 
 .qc-card li svg {
-   font-size: 1rem;
+   font-size: 1.25rem;
   width: 18px;
   height: 18px;
   color: var(--accent);
