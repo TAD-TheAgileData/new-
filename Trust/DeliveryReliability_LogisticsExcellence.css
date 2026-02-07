@@ -1,124 +1,117 @@
-/* ROOT */
-.cf-root {
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #ffffff, #eef2f7);
+.reliability-page {
+  width: 100%;
+  background-color: #ffffff;
   color: #0f172a;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
-.cf-hero {
-  height: 90vh;
+.reliability-hero {
+  height: 75vh;
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: linear-gradient(
+    rgba(15, 23, 42, 0.65),
+    rgba(15, 23, 42, 0.65)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  color: #ffffff;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.25rem;
+  max-width: 600px;
+}
+/* ICON BOX */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(2, 132, 199, 0.12);
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.cf-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0.95),
-    rgba(255,255,255,0.7)
-  );
-}
-
-.cf-hero-content {
-  position: relative;
-  padding: 0 10%;
-  max-width: 800px;
-}
-
-.cf-chip {
-  display: inline-block;
-  padding: 10px 34px;
-  border-radius: 999px;
-  background: rgba(2,132,199,0.15);
+.icon-box svg {
+  font-size: 30px;
   color: #0284c7;
-  font-size: 0.9rem;
-  letter-spacing: 0.28em;
-  margin-bottom: 30px;
 }
 
-.cf-hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 22px;
+.icon-box:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 22px 60px rgba(2, 132, 199, 0.4);
 }
 
-.cf-hero-content p {
-  font-size: 1.25rem;
-  line-height: 1.9;
-  color: #475569;
-}
-
-/* MODULE */
-.cf-module {
-  padding: 160px 10%;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 120px;
+/* SECTIONS */
+.reliability-section {
+  display: flex;
   align-items: center;
+  gap: 4rem;
+  padding: 5rem 10%;
 }
 
-.cf-module.reverse {
-  grid-template-columns: 0.9fr 1.1fr;
+.reliability-section.reverse {
+  flex-direction: row-reverse;
 }
 
-/* TEXT */
-.cf-module-text span {
-  font-size: 3rem;
-  font-weight: 600;
-  color: rgba(2,132,199,0.18);
-}
-
-.cf-module-text h2 {
-  font-size: 2.4rem;
-  margin: 16px 0 20px;
-}
-
-.cf-module-text p {
-  font-size: 1.25rem;
-  line-height: 1.9;
-  color: #475569;
-}
-
-/* IMAGE VISUAL (NO BOX LOOK) */
-.cf-module-visual {
-  position: relative;
-  width: 100%;
+.reliability-section img {
+  width: 50%;
   height: 360px;
-  overflow: hidden;
-  border-radius: 36px;
-  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
-}
-
-.cf-module-image {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 36px;
-  transition: transform 0.8s ease;
+  border-radius: 8px;
 }
 
-.cf-module-visual:hover .cf-module-image {
-  transform: scale(1.06);
+.reliability-section .content {
+  width: 50%;
+}
+
+.reliability-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #020617;
+}
+
+.reliability-section p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #475569;
 }
 
 /* RESPONSIVE */
-@media (max-width: 1100px) {
-  .cf-module,
-  .cf-module.reverse {
-    grid-template-columns: 1fr;
-    gap: 70px;
+@media (max-width: 992px) {
+  .reliability-section,
+  .reliability-section.reverse {
+    flex-direction: column;
   }
 
-  .cf-hero-content h1 {
-    font-size: 3rem;
+  .reliability-section img,
+  .reliability-section .content {
+    width: 100%;
   }
 
-  .cf-module-visual {
-    height: 280px;
+  .reliability-hero {
+    height: 60vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.1rem;
   }
 }
