@@ -73,12 +73,7 @@ export default function MetroRail() {
       and global certification standards.
     </motion.p>
 
-    <motion.div
-      variants={heroText}
-      className="mr-scroll-indicator"
-    >
-      ⟱ Explore Capabilities
-    </motion.div>
+   
   </motion.div>
 </section>
 
